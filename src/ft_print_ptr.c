@@ -6,14 +6,14 @@
 /*   By: fjimenez <fjimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/16 18:52:58 by fernando          #+#    #+#             */
-/*   Updated: 2020/02/07 14:30:10 by fjimenez         ###   ########.fr       */
+/*   Updated: 2020/02/10 07:38:58 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "ft_printf.h"
 
-static void	ft_ptr_int(t_env *env, size_t len, unsigned long int arg)
+static void	ft_ptr_point(t_env *env, size_t len, unsigned long int arg)
 {
 	if (arg == 0)
 	{
@@ -110,7 +110,7 @@ void		ft_print_ptr(t_env *env, unsigned long int arg)
 	len = ft_nblen_base(arg, "0123456789abcdef") + 2;
 	if ((int)env->prec == -1 && !env->zero)
 	{
-		ft_ptr_int(env, len, arg);
+		ft_ptr_point(env, len, arg);
 		return ;
 	}
 	if (env->zero)

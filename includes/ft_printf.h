@@ -6,7 +6,7 @@
 /*   By: fjimenez <fjimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/12/16 10:03:29 by fjimenez          #+#    #+#             */
-/*   Updated: 2020/02/07 12:16:50 by fjimenez         ###   ########.fr       */
+/*   Updated: 2020/02/10 09:07:51 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,6 @@ void			ft_print_ptr(t_env *env, unsigned long int arg);
 int				ft_arraytoint(const char *str);
 void			ft_num_prec_neg(t_env *env, int arg, size_t arglen);
 void			ft_wid_hig_prec_neg(t_env *env, int arg, size_t arglen);
-void			ft_num_min_neg(t_env *env, int arg);
 void			ft_num_prec_point_neg(t_env *env, int arg, size_t arglen);
 void			ft_wid_zero(t_env *env, int arg, size_t arglen);
 void			ft_zero_point(t_env *env, int arg, size_t arglen);

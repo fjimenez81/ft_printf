@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_put_num_neg.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fernando <fernando@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fjimenez <fjimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/15 19:30:13 by fernando          #+#    #+#             */
-/*   Updated: 2020/02/09 01:40:54 by fernando         ###   ########.fr       */
+/*   Updated: 2020/02/10 09:04:59 by fjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ static void	ft_widmorearg_neg(t_env *env, int arg, size_t arglen)
 		if (env->prec > arglen)
 			env->width = env->prec;
 		if (env->width < arglen)
-		{
 			ft_putnbr_fd(arg, 1);
-		}
 		else
 		{
 			ft_putchar_fd('-', 1);
@@ -76,7 +74,7 @@ static void	ft_zero_prec(t_env *env, size_t arglen, int arg)
 		{
 			arg *= -1;
 			ft_putchar_fd('-', 1);
-			ft_join_nbr(arg, env->width - arglen, '0', 0);
+			ft_join_unsig(arg, env->width - arglen, '0', 0);
 		}
 		else
 		{
@@ -111,9 +109,7 @@ void		ft_put_num_neg(t_env *env, int arg)
 	size_t	arglen;
 
 	arglen = ft_nblen(arg);
-	if (arg == -2147483648 && !env->zero && env->prec)
-		ft_num_min_neg(env, arg);
-	if (env->zero && (int)env->prec != -1 && arg != -2147483648)
+	if (env->zero && (int)env->prec != -1)
 	{
 		ft_wid_zero_neg(env, arglen, arg);
 		return ;
@@ -125,7 +121,7 @@ void		ft_put_num_neg(t_env *env, int arg)
 	}
 	if ((int)env->prec == -1)
 		ft_num_prec_point_neg(env, arg, arglen);
-	else if (env->prec && (int)env->prec != -1 && arg != -2147483648)
+	else if (env->prec && (int)env->prec != -1)
 		ft_print_prec_neg(env, arglen, arg);
 	else if (env->width && !env->prec && (int)env->prec != -1)
 		ft_wid_not_prec_neg(env, arg, arglen);
