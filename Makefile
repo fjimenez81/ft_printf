@@ -3,12 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fernando <fernando@student.42.fr>          +#+  +:+       +#+         #
+#    By: fjimenez <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/20 12:14:57 by fjimenez          #+#    #+#              #
-#    Updated: 2020/02/05 20:14:36 by fernando         ###   ########.fr        #
+#    Updated: 2021/09/03 09:48:49 by fjimenez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+#
 
 NAME = libftprintf.a
 LIBFT =	libft.a
